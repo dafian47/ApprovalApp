@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorAccent">#ff1595a2</color>
+    <color name="colorPrimary">#ff3b4157</color>
+    <color name="colorPrimaryDark">#ff52596b</color>
+    <color name="colorDrawerBackground">#F2F2F2</color>
+    <color name="colorWindowBackground">#DEDEDE</color>
+    <color name="colorPrimaryText">#212121</color>
+    <color name="colorLightPrimaryText">#bbdefb</color>
+    <color name="colorSecondaryText">#727272</color>
+    <color name="colorNormalText">#FFFFFF</color>
+    <color name="colorNavigation">#000000</color>
+    <color name="colorDivider">#B6B6B6</color>
+    <color name="selected_gray">#ffdbdbdb</color>
+
+    <color name="nav_drawer_events">#ff6db784</color>
+    <color name="nav_drawer_halal_finder">#ffa7db86</color>
+    <color name="nav_drawer_home">#fffe6138</color>
+    <color name="nav_drawer_prayer_location">#ffffea6d</color>
+    <color name="nav_drawer_settings">#ff07a574</color>
+
+    <color name="foreground1">#355689</color>
+    <color name="foreground2">#7081a3</color>
+    <color name="background1">#ffffff</color>
+
+    <color name="background2">#d5ddeb</color>
+    <color name="background3">#e3e8f1</color>
+    <color name="background4">#009688</color>
+    <color name="background5">#37474f</color>
+    <color name="background6">#263238</color>
+
+    <color name="white">#ffffffff</color>
+    <color name="white_transparent">#20FFFFFF</color>
+    <color name="white_transparent_1">#70FFFFFF</color>
+    <color name="black">#ff000000</color>
+
+    <color name="holo_blue_light">#ff33b5e5</color>
+    <color name="holo_gray_light">#33999999</color>
+    <color name="holo_green_light">#ff99cc00</color>
+    <color name="holo_red_light">#ffff4444</color>
+    <color name="holo_blue_dark">#ff0099cc</color>
+    <color name="holo_green_dark">#ff669900</color>
+    <color name="holo_red_dark">#ffcc0000</color>
+    <color name="holo_purple">#ffaa66cc</color>
+    <color name="holo_orange_light">#ffffbb33</color>
+    <color name="holo_orange_dark">#ffff8800</color>
+    <color name="holo_blue_bright">#ff00ddff</color>
+    <color name="holo_gray_bright">#33CCCCCC</color>
+</resources>
