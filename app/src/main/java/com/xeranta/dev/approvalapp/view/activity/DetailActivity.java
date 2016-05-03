@@ -53,7 +53,7 @@ public class DetailActivity extends AppCompatActivity implements DetailView {
         setContentView(R.layout.activity_detail_task);
         ButterKnife.bind(this);
 
-        presenter   = new DetailPresenter(this);
+        presenter   = new DetailPresenter(DetailActivity.this, DetailActivity.this);
         presenter.attachView(this);
 
         Bundle b = getIntent().getExtras();

@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.xeranta.dev.approvalapp.R;
 import com.xeranta.dev.approvalapp.presenter.LoginPresenter;
@@ -30,7 +31,7 @@ public class LoginActivity extends AppCompatActivity implements LoginView {
         setContentView(R.layout.activity_login);
         ButterKnife.bind(this);
 
-        presenter   = new LoginPresenter();
+        presenter   = new LoginPresenter(LoginActivity.this);
         presenter.attachView(this);
 
         btLogin.setOnClickListener(new View.OnClickListener() {
@@ -54,12 +55,12 @@ public class LoginActivity extends AppCompatActivity implements LoginView {
 
     @Override
     public void showLoginFailed() {
-
+        Toast.makeText(this, "Username or Password not allow null!", Toast.LENGTH_LONG).show();
     }
 
     @Override
     public Context getContext() {
-        return this;
+        return LoginActivity.this;
     }
 
     @Override

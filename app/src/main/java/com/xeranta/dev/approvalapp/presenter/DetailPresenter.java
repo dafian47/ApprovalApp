@@ -1,5 +1,6 @@
 package com.xeranta.dev.approvalapp.presenter;
 
+import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.AsyncTask;
@@ -27,11 +28,12 @@ public class DetailPresenter implements BasePresenter<DetailView> {
 
     private AQuery aq;
     private ProgressDialog dialog;
-    private BaseApplication application;
+    private Activity activity;
 
-    public DetailPresenter(Context context) {
-        this.aq     = new AQuery(context);
-        this.dialog = new ProgressDialog(context);
+    public DetailPresenter(Context context, Activity activity) {
+        this.aq         = new AQuery(context);
+        this.dialog     = new ProgressDialog(context);
+        this.activity   = activity;
     }
 
     @Override
@@ -49,7 +51,6 @@ public class DetailPresenter implements BasePresenter<DetailView> {
     }
 
     public void updateTaskById(String taskId, String taskStatus) {
-        application = (BaseApplication) detailView.getContext();
         new UpdateApproveStatus(taskId, taskStatus).execute();
     }
 
@@ -122,7 +123,7 @@ public class DetailPresenter implements BasePresenter<DetailView> {
         private String taskId;
         private String taskStatus;
 
-        private static final String DATE_SERVER_FORMAT = "yyyy-MM-dd HH:mm:ss";
+        private static final String DATE_SERVER_FORMAT = "yyyy-MM-dd";
 
         private UpdateApproveStatus(String taskId, String taskStatus) {
             this.taskId = taskId;
@@ -132,7 +133,7 @@ public class DetailPresenter implements BasePresenter<DetailView> {
         @Override
         protected Void doInBackground(Void... params) {
 
-            String user = application.getGlobalUserName();
+            String user = ((BaseApplication) activity.getApplication()).getGlobalUserName();
 
             DateTime currentDate = new DateTime();
             String date = DateTimeFormat.forPattern(DATE_SERVER_FORMAT).print(currentDate);

@@ -6,7 +6,7 @@ import java.util.Date;
 
 public final class Helper {
 
-    private static final String DATE_SERVER_FORMAT = "yyyy-MM-dd HH:mm:ss";
+    private static final String DATE_SERVER_FORMAT = "yyyy-MM-dd";
     private static final String DATE_LOCAL_FORMAT = "dd MMMM yyyy";
 
     public static String changeDateFormat(String createDate) {

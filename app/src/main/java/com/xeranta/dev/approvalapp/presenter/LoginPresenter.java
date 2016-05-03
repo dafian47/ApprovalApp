@@ -1,5 +1,7 @@
 package com.xeranta.dev.approvalapp.presenter;
 
+import android.app.Activity;
+
 import com.xeranta.dev.approvalapp.BaseApplication;
 import com.xeranta.dev.approvalapp.view.activity.LoginView;
 
@@ -7,8 +9,10 @@ public class LoginPresenter implements BasePresenter<LoginView> {
 
     private LoginView loginView;
 
-    public LoginPresenter() {
+    private Activity activity;
 
+    public LoginPresenter(Activity activity) {
+        this.activity = activity;
     }
 
     @Override
@@ -23,12 +27,10 @@ public class LoginPresenter implements BasePresenter<LoginView> {
 
     public void login(String username, String password) {
 
-        BaseApplication application = (BaseApplication) loginView.getContext();
-
         if (validate(username, password)) {
 
-            application.setGlobalUserName(username);
-            application.setGlobalPassword(password);
+            ((BaseApplication) activity.getApplication()).setGlobalUserName(username);
+            ((BaseApplication) activity.getApplication()).setGlobalPassword(password);
 
             loginView.showLoginSuccess();
 
