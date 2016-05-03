@@ -4,4 +4,14 @@
 
     <string name="main_page">Home</string>
     <string name="login_page">Login</string>
+
+    <string name="company_name">PT SMI</string>
+    <string name="subtitle">Mobile Approval</string>
+
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+
+    <string name="login">Login</string>
+    <string name="verification">Verification</string>
+    <string name="register">Register</string>
 </resources>
